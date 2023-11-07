@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('work.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 36px;
+    color: #00bcd4; /* Vibrant color */
+    margin-bottom: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0097a7; /* Vibrant color */
+    color: #fff;
+    font-size: 36px;
+    cursor: pointer;
+    border: 2px solid #00bcd4; /* Vibrant border color */
+}
+
+.cell:hover {
+    background-color: #00bcd4;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button#reset {
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button#reset:hover {
+    background-color: #0097a7;
+}
+
+/* Responsive adjustments for screens up to 420px */
+@media (max-width: 420px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        gap: 5px;
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+        border: 1px solid #00bcd4;
+    }
+
+    button#reset {
+        font-size: 16px;
+    }
+}
